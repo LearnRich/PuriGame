@@ -13,5 +13,12 @@ GAME_RUNNING = 2
 GAME_OVER = 3
 HIGH_SCORE = 4
 
+NEW_GAME = "New Game"
+LOAD_GAME = "Load Game"
+OPTIONS = "Options"
+SAVE = "Save"
+PLAYER_WIN = "Winner"
+PLAYER_LOSE = "Git Gud! :P"
+
 IMG_WIDTH = 32
 IMG_HEIGHT = 32

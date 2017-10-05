@@ -1,5 +1,5 @@
 from objects import GameObject, Player, Enemy, Projectiles
-from framework import Globals
+from framework import Globals, Menu
 import pygame
 
 class Handler:
@@ -9,6 +9,8 @@ class Handler:
         self.enemy_list = []
         self.object_list = []
         self.hud = hud
+        self.menu = Menu.Menu(100, 200)
+        self.menu.add_options((Globals.NEW_GAME, Globals.LOAD_GAME, Globals.OPTIONS))
 
     def update(self):
         # move the player
@@ -54,6 +56,8 @@ class Handler:
                 self.remove(object)
 
         self.player.update_lvl()
+
+
 
     def draw_objects(self, screen):
         for laser in self.laser_list:

@@ -1,8 +1,10 @@
-import random, pygame, math
+import random
+import pygame
+import math
 from framework import Globals, SpriteSheet
 from objects import GameObject, Projectiles, Enemy
 
-
+#here
 class Player(GameObject.GameObject):
     def __init__(self):
         super().__init__(Globals.WIDTH/2 - 20, Globals.HEIGHT - 75, 20, 32, 0, 0)
@@ -28,15 +30,13 @@ class Player(GameObject.GameObject):
 
         self.anim_left = [
             pygame.transform.flip(
-                self.sprite_sheet.get_image(64,
-                                            0,
-                                            Globals.IMG_WIDTH,
-                                            Globals.IMG_HEIGHT),
-                True,
-                False),
-            pygame.transform.flip(self.sprite_sheet.get_image(0, 32, Globals.IMG_WIDTH, Globals.IMG_HEIGHT),True, False),
-            pygame.transform.flip(self.sprite_sheet.get_image(32, 32, Globals.IMG_WIDTH, Globals.IMG_HEIGHT),True, False),
-            pygame.transform.flip(self.sprite_sheet.get_image(64, 32, Globals.IMG_WIDTH, Globals.IMG_HEIGHT),True, False)
+                self.sprite_sheet.get_image(64, 0, Globals.IMG_WIDTH, Globals.IMG_HEIGHT), True, False),
+            pygame.transform.flip(
+                self.sprite_sheet.get_image(0, 32, Globals.IMG_WIDTH, Globals.IMG_HEIGHT), True, False),
+            pygame.transform.flip(
+                self.sprite_sheet.get_image(32, 32, Globals.IMG_WIDTH, Globals.IMG_HEIGHT), True, False),
+            pygame.transform.flip(
+                self.sprite_sheet.get_image(64, 32, Globals.IMG_WIDTH, Globals.IMG_HEIGHT), True, False)
         ]
 
         self.anim_pos = 0
@@ -93,7 +93,7 @@ class Player(GameObject.GameObject):
             if self.anim_speed == 0:
                 # If IDLE
                 if self.vel_x == 0:
-                # IDLE ANIM
+                    # IDLE ANIM
                     # changes here
                     if self.anim_pos >= self.anim_idle_max:
                         self.anim_pos = 0
