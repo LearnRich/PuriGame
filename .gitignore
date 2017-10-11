@@ -1,2 +1,8 @@
-
 .idea/misc.xml
+.idea/modules.xml
+.idea/workspace.xml
+.idea/PuriGame.iml
+.idea/workspace.xml
+framework/__pycache__/Globals.cpython-34.pyc
+framework/__pycache__/Handler.cpython-34.pyc
+.idea/vcs.xml
